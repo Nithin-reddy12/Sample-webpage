@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+.navbar ul li {
+  margin: 0 10px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('images/background.jpg'); /* Add the correct path to your image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  height: 100vh;
+  width: 100%;    /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+/* Dark overlay to improve content visibility */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% transparency */
+  z-index: 1; /* ensure overlay is above the background image */
+}
+/* hero content */
+.hero-content {
+  position: relative; /* ensures content is above overlay */
+  z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.hero-content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero-content button:hover {
+  background-color: #0056b3;
+}
+
+
+   
+/* Services Section */
+#services i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#services h4 {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Style for the container */
+.about-us-section {
+    display: flex;
+    align-items: center; /* Centers the image and text vertically */
+    gap: 20px; /* Adds space between the image and the text */
+    margin: 20px; /* Adds padding around the section */
+  }
+  
+  /* Fix image dimensions */
+  .zoom-image {
+    width: 400px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for a better look */
+    animation: zoomInOut 5s infinite ease-in-out; /* Zoom animation */
+  }
+  
+  /* Text section */
+  .about-text {
+    max-width: 600px; /* Restrict the text width */
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  /* Zoom-in-out animation */
+  @keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Zoom in slightly */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+    }
+  }
+  
+  
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+}
